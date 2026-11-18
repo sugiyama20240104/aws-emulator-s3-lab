@@ -2,7 +2,7 @@
 
 猫の画像を1枚保存して、同じ画像を取り出すハンズオンです。AWS CLIとAWS Emulatorの両方が1つのコンテナ内で動きます。必要なのはGit、Docker、Docker Compose（`up --wait` 対応版）です。AWSアカウントの作成や、PCへのAWS CLIのインストールは不要です。
 
-[発表スライド「AWS Emulator入門」を開く（PDF・全13枚）](docs/aws-emulator-intro.pdf)
+[発表スライド「AWS Emulator入門」を開く（PDF・全14枚）](docs/aws-emulator-intro.pdf)
 
 ## まず動かす
 
