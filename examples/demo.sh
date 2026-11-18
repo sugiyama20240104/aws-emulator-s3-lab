@@ -19,4 +19,5 @@ aws s3 cp "s3://$bucket/$key" "$file"
 original=$(sha256sum /opt/lab/cat.jpg)
 retrieved=$(sha256sum "$file")
 [ "${original%% *}" = "${retrieved%% *}" ] || { echo 'Downloaded bytes differ' >&2; exit 1; }
+mv "$file" /tmp/downloaded-cat.jpg
 echo "OK: photos/cat.jpg matches the original."

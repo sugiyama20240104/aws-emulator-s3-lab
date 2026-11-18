@@ -17,6 +17,12 @@ docker compose exec lab sh /opt/lab/demo.sh
 
 デモは接続先のアカウントIDを確認し、バケットを作り、同梱の猫の画像をアップロードします。一覧を2通り表示してから画像をダウンロードし、元画像とSHA-256が一致すると `OK: photos/cat.jpg matches the original.` と表示します。デモは繰り返し実行できます。
 
+**Macで取得した画像を見る**　デモに成功すると、照合済みの画像がコンテナ内の `/tmp/downloaded-cat.jpg` に残ります。教材フォルダーで次のコマンドを実行すると、その画像をMacにコピーして「プレビュー」で開けます。
+
+```sh
+docker compose cp lab:/tmp/downloaded-cat.jpg ./downloaded-cat.jpg && open -a Preview ./downloaded-cat.jpg
+```
+
 ## 同じ操作を自分で試す
 
 **1. 接続先を確認する。** `Account` が `000000000000` ならエミュレーターです。コマンド先頭の `docker compose exec lab` は「このコンテナの中で実行する」という意味です。
